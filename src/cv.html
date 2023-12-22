@@ -4,45 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+<body class="font-sans">
+    <header class="sm:p-4">
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="cv.html">Cv</a></li>
+            <div class="flex justify-between">
+                <div class="sm:hidden">
+                    <svg class="w-8 ml-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                    </svg>
+                </div>
+                <div class="cursor-pointer sm:hidden" id="burger">
+                    <svg class="w-8 mr-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+                </div>
+            </div>
+            <ul class="sm:flex sm:justify-center hidden" id="menu">
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="home.html">Home</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="about.html">About</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="contact.html">Contact</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="project.html">Project</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Abdulselam Abdurehman</h1>
-    <main>
-        <section id="tech-stack">
-            <h2>Tech Stack</h2>
+    <main class="px-4 mb-8 mt-6">
+        <h1 class="text-4xl my-4">Abdulselam Abdurehman</h1>
+        <section class="mb-4">
+            <h2 class="text-2xl">Tech Stack</h2>
             <table>
                 <tr>
-                    <td>Languages</td>
-                    <td>Python, Java, JavaScript</td>
+                    <td class="font-medium px-4" >Languages</td>
+                    <td class="ml-4">Python, Java, JavaScript</td>
                 </tr>
                 <tr>
-                    <td>Frameworks</td>
+                    <td class="font-medium px-4">Frameworks</td>
                     <td>Flask, Django, Express, React and Node</td>
                 </tr>
                 <tr>
-                    <td>Frontend</td>
+                    <td class="font-medium px-4">Frontend</td>
                     <td>Html, CSS, Bootstrap</td>
                 </tr>
                 <tr>
-                    <td>Database</td>
+                    <td class="font-medium px-4">Database</td>
                     <td>MongoDB, MySQL</td>
                 </tr>
             </table>
         </section>
-        <section id="soft-skills">
-            <h2>My soft skills include</h2>
-            <ul>
+        <section class="mb-4">
+            <h2 class="text-2xl">My soft skills include</h2>
+            <ul class="ml-4 list-disc list-inside">
                 <li>Problem Solving</li>
                 <li>Communication</li>
                 <li>Critical Thinking</li>
@@ -50,9 +63,9 @@
                 <li>Adaptability and Learning</li>
             </ul>
         </section>
-        <section id="testimony">
-            <h2>Listen to Testimonies</h2>
-            <video controls width="640" height="360">
+        <section class="text-center">
+            <h2 class="text-2xl mb-8">Listen to Testimonies</h2>
+            <video class="mx-auto w-full sm:w-3/5 md:h-2/5 lg:h-1/5 h-auto" controls width="640" height="360">
                 <source src="images/video.mp4" type="video/mp4">
                 <track kind="subtitles" src="images/transcript.vtt" srclang="en" label="English">
                 Unsupported Content
@@ -60,5 +73,9 @@
             <p>Listen to what the guy has to say!!</p>
         </section>
     </main>
+    <footer class="text-center mt-auto p-4 bg-slate-700 text-white ">
+        <p>Copyright&copy; 2023 Abdulselam Abdurehman</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

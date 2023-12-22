@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home</title>    
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+<body class="font-sans flex flex-col min-h-screen">
+    <header class="sm:p-4">
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="cv.html">Cv</a></li>
+            <div class="flex justify-between">
+                <div class="sm:hidden">
+                    <svg class="w-8 ml-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                    </svg>
+                </div>
+                <div class="cursor-pointer sm:hidden" id="burger">
+                    <svg class="w-8 mr-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+                </div>
+            </div>
+            <ul class="sm:flex sm:justify-center hidden" id="menu">
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="home.html">Home</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="about.html">About</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="contact.html">Contact</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="project.html">Project</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="flex flex-col items-center mx-4 mt-4">
         <aside><p>Thank You for visiting my site</p></aside>
-        <section>
-            <img src="images/profile_img.jpg" alt="profile_img">
-            <h1>I am Abdulselam</h1>
-            <h2>I am software engineering student at AAiT</h2>
-
+        <section class="flex flex-col items-center m-4">
+            <img class="rounded-sm m-2 sm:w-full md:w-4/5 h-auto mb-8" src="images/profile_img.jpg" alt="profile_img">
+            <h1 class="text-4xl">I am Abdulselam</h1>
+            <h2 class="text-2xl">I am software engineering student at AAiT</h2>
         </section>
     </main>
-    <footer>
+    <footer class="text-center mt-auto p-4 bg-slate-700 text-white ">
         <p>Copyright&copy; 2023 Abdulselam Abdurehman</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

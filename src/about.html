@@ -4,63 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
 <body>
-    <header>
+    <header class="sm:p-4">
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="cv.html">Cv</a></li>
+            <div class="flex justify-between">
+                <div class="sm:hidden">
+                    <svg class="w-8 ml-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                    </svg>
+                </div>
+                <div class="cursor-pointer sm:hidden" id="burger">
+                    <svg class="w-8 mr-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+                </div>
+            </div>
+            <ul class="sm:flex sm:justify-center hidden" id="menu">
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="home.html">Home</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="about.html">About</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="contact.html">Contact</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="project.html">Project</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="education">
-            <h2>Education</h2>
+    <main class="px-4 mb-4">
+        <h1 class="text-4xl">Education</h1>
+        <section class="ml-8 my-4">
             <dl>
-            <dt>B.Sc. in Software Engineering</dt>
-            <dd>
+            <dt class="text-xl">B.Sc. in Software Engineering</dt>
+            <dd class="pl-8">
                 <table>
                     <tr>
                         <td>Addis Ababa University</td>
                         <td>2022 - Present</td>
                     </tr>
                 </table>
-                </dd>
-                <dt>Senior Secondary Education</dt>
-                <dd>
-                    <table>
-                        <tr>
-                            <td>Addis Ketema Preparatory School</td>
-                            <td>2019 - 2021</td>
-                        </tr>
-                    </table>
-                </dd>
-                <dt>High School</dt>
-                <dd>
-                    <table>
-                        <tr>
-                            <td>Kolfe Secondary School</td>
-                            <td>2017 - 2019</td>
-                        </tr>
-                    </table>
-                </dd>
+            </dd>
+            <dt class="text-xl">Senior Secondary Education</dt>
+            <dd class="pl-8">
+                <table>
+                    <tr>
+                        <td>Addis Ketema Preparatory School</td>
+                        <td>2019 - 2021</td>
+                    </tr>
+                </table>
+            </dd>
+            <dt class="text-xl">High School</dt>
+            <dd class="pl-8">
+                <table>
+                    <tr>
+                        <td>Kolfe Secondary School</td>
+                        <td>2017 - 2019</td>
+                    </tr>
+                </table>
+            </dd>
             </dl>
         </section>
-        <section id="personal-life">
-            <h2>My routine activities include</h2>
-                 <ul>
+        <h1 class="text-4xl">My routine activities include</h1>
+        <section class="ml-8 my-4">
+                 <ul class="list-disc list-inside">
                     <li>Reading books</li>
                     <li>Watching Documentaries</li>
                     <li>Walking</li>
                  </ul>
         </section>
-        <section id="interests">
-            <h2>Interests</h2>
-            <ol>
+        <h1 class="text-4xl">Interests</h1>
+        <section class="ml-8 my-4">
+            <ol class="list-disc list-inside">
                 <li>Coding</li>
                 <li>Learning Mathematics</li>
                 <li>Walking</li>
@@ -68,57 +82,59 @@
                 <li>Calisthenics</li>
             </ol>
         </section>
-        <section id="aspirations">
-            <h2>Aspirations</h2>
-            <ol>
+        <h1 class="text-4xl">Aspirations</h1>
+        <section class="ml-8 my-4">
+            <ol class="list-inside list-disc">
                 <li>Excel in my career as a software Engineer</li>
                 <li>improve myself in my <span class="qualities">spiritual</span> and <span class="qualities">academic</span> endeavors</li>
                 <li>Do a deep research on the so-called <a href="https://en.wikipedia.org/wiki/NP-hardness">NP, NP-Hard and NP-Complete</a> problems in Algorithms.</li>
             </ol>
         </section>
-        <section id="favourite">
-            <h2>My Favourite Books</h2>
-            <ol>
+        <h1 class="text-4xl">My Favourite Books</h1>
+        <section class="ml-8 my-4">
+            <ol class="list-inside list-disc">
                 <li><cite>Introduction to Algorithms, CLRS</cite></li>
                 <li><cite>Starting Out with Python, Tony Gaddis</cite></li>
                 <li><cite>Calculus Early Transcendentals, James Stewart</cite></li>
                 <li><cite>Learning Web Design, Jennifer Robbins</cite></li>
            </ol>
         </section>
-
-        <section id="achievements">
-            <h1>Achievements</h1>
-            <ul>
+        <h1 class="text-4xl">Achievements</h1>
+        <section class="mx-4 mt-8">
+            <ul class="text-center">
                 <li>
                     <figure>
-                    <img src="images/addis-ababa.jpg" alt="certificate">
-                    <p>Top Scorer among the city&rsquo;s govenment schools in UEE 2021 from govenment schools across Addis Ababa</p></figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="images/addis-ketema.jpg" alt="certificate">
-                        <p>From Addis Ketema Sub-city Education Bureau</p>
+                        <img class="mx-auto w-full sm:w-3/5 md:h-2/5 lg:h-1/5 h-auto" src="images/addis-ababa.jpg" alt="certificate">
+                        <p class="text-xl font-semibold mt-4 mb-6">Top Scorer among the city&rsquo;s government schools in UEE 2021 from government schools across Addis Ababa</p>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="images/iks.jpg" alt="certificate">
-                        <p>I am two-time gold medal winner of the IKS outstanding student award</p>
+                        <img class="mx-auto w-full sm:w-3/5 md:h-2/5 lg:h-1/5 h-auto" src="images/addis-ketema.jpg" alt="certificate">
+                        <p class="text-xl font-semibold mt-4 mb-6">From Addis Ketema Sub-city Education Bureau</p>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img class="mx-auto w-full sm:w-3/5 md:h-2/5 lg:h-1/5 h-auto" src="images/iks.jpg" alt="certificate">
+                        <p class="text-xl font-semibold mt-4 mb-6">I am two-time gold medal winner of the IKS outstanding student award</p>
                     </figure>
                 </li>
             </ul>
         </section>
-    <figure id="advice">
-        <p>Listen to my Favourite Advice</p>
-        <audio controls>
-            <source src="images/listen.mp3" type="audio/mp3">
-        </audio>
-
-        <p>Dr. Someone</p>
+    <figure class="ml-8">
+        <p class="text-2xl mb-4">Listen to my Favourite Advice</p>
+        <div>
+            <audio class="ml-4" controls>
+                <source src="images/listen.mp3" type="audio/mp3">
+            </audio>
+            <p class="text-lg ml-10">Dr. Someone</p>
+        </div>
     </figure>
     </main>
-    <footer>
-        Copyright&copy; Abdulselam&rsquo;s personal website
+    <footer class="mt-auto bg-slate-700 text-white p-4 items-center">
+        <p class="text-center">Copyright&copy; Abdulselam&rsquo;s personal website</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

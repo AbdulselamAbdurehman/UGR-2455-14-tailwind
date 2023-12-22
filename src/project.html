@@ -4,33 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+<body class="font-sans">
+    <header class="sm:p-4">
         <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="cv.html">Cv</a></li>
+            <div class="flex justify-between">
+                <div class="sm:hidden">
+                    <svg class="w-8 ml-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                    </svg>
+                </div>
+                <div class="cursor-pointer sm:hidden" id="burger">
+                    <svg class="w-8 mr-8 mt-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+                </div>
+            </div>
+            <ul class="sm:flex sm:justify-center hidden" id="menu">
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="home.html">Home</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="about.html">About</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="contact.html">Contact</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="project.html">Project</a></li>
+                <li class="bg-slate-700 w-full sm:w-fit mx-4 p-2 rounded-md text-white"><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <figure>
-            <a href="https://github.com/AbdulselamAbdurehman/Client-Server"><img src="images/project1.png" alt="client-server"></a>
-            <h1>Client-Server Architecture Demonstration</h1>
-            <p>A simple messaging application using client-server architecture models in python for Communication within range of 35 feets.</p>
+    <main class="mb-8 mt-6 px-4 justify-center text-center">
+        <figure class="mb-8">
+            <a href="https://github.com/AbdulselamAbdurehman/Client-Server">
+                <img class="mb-4 mx-auto w-full sm:w-3/5 md:h-2/5 lg:h-1/5 h-auto rounded-md" src="images/project1.png" alt="client-server">
+            </a>
+            <h1 class="text-4xl">Client-Server Architecture Demonstration</h1>
+            <p class="mx-auto xlg w-3/4">A simple messaging application using client-server architecture models in python for Communication within range of 35 feets.</p>
         </figure>
         <figure>
-            <a href="https://github.com/AbdulselamAbdurehman/Automated-Testing"><img src="images/project2.png" alt="robots"></a>
-            <h1>Automated Testing</h1>
-            <p>I really like competitive programming, except one thing &mdash; debugging my codes. I come up with this <em>Automated Tester</em> which can help in figuring out what the problems do exist in the code with little effort. </p>
+            <a href="https://github.com/AbdulselamAbdurehman/Automated-Testing">
+                <img class="mb-4 mx-auto w-full sm:w-3/5 md:h-2/5 lg:h-1/5 h-auto rounded-md" src="images/project2.png" alt="robots"></a>
+            <h1 class="text-4xl">Automated Testing</h1>
+            <p class="mx-auto xlg w-3/4">I really like competitive programming, except one thing &mdash; debugging my codes. I come up with this <em class="font-bold">Automated Tester</em> which can help in figuring out what the problems do exist in the code with little effort. </p>
         </figure>
     </main>
-    <footer>
+    <footer class="text-center mt-auto p-4 bg-slate-700 text-white ">
         <p>Copyright&copy; 2023 Abdulselam Abdurehman</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
